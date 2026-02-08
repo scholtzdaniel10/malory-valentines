@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, My Love 💕</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Floating particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Music Control -->
+  <button id="music-toggle" class="music-btn" aria-label="Toggle music">
+    <span class="music-icon music-off">♪</span>
+    <span class="music-icon music-on" style="display:none;">♫</span>
+    <span class="music-pulse"></span>
+  </button>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <p class="hero-pretext">A letter written from my heart</p>
+      <h1 class="hero-title">
+        <span class="title-line">My Heart</span>
+        <span class="title-line accent">Chose You</span>
+      </h1>
+      <p class="hero-subtitle">Every love story is beautiful, but ours is my favorite.</p>
+      <div class="scroll-indicator">
+        <span class="scroll-heart">♥</span>
+        <p class="scroll-text">Scroll down, my love</p>
+        <div class="scroll-arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOVE LETTER SECTION ===== -->
+  <section id="letter" class="section letter-section">
+    <div class="section-container">
+      <div class="letter-card reveal">
+        <div class="letter-decoration top-left">❦</div>
+        <div class="letter-decoration top-right">❦</div>
+        <p class="letter-date">February 14th, 2025</p>
+        <h2 class="letter-greeting">My Dearest Malory,</h2>
+        <div class="letter-body">
+          <p>From the moment you came into my life, everything changed. The colors became brighter, the days became warmer, and my heart found its home.</p>
+          <p>You are the first thought that greets me each morning and the last whisper before I fall asleep. In a world full of chaos, you are my peace, my calm, and my greatest adventure.</p>
+          <p>I never knew what it meant to truly love someone until I found you. You make me want to be better, dream bigger, and love deeper every single day.</p>
+          <p>This letter is just a small window into the universe of feelings I hold for you. Words will never be enough, but I'll spend forever trying.</p>
+          <p class="letter-closing">With all my love, forever and always,</p>
+          <p class="letter-signature">Your Person ♥</p>
+        </div>
+        <div class="letter-decoration bottom-left">❦</div>
+        <div class="letter-decoration bottom-right">❦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR MOMENTS / TIMELINE ===== -->
+  <section id="moments" class="section moments-section">
+    <div class="section-container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">Our</span> Moments
+      </h2>
+      <p class="section-subtitle reveal">The chapters of our love story</p>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <div class="timeline-img-placeholder">
+              <span class="placeholder-icon">📸</span>
+              <span class="placeholder-text">Our First Photo</span>
+            </div>
+            <h3>The Day We Met</h3>
+            <p>The universe aligned and brought us together. I didn't know it then, but that moment changed my life forever.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <div class="timeline-img-placeholder">
+              <span class="placeholder-icon">💕</span>
+              <span class="placeholder-text">Our First Date</span>
+            </div>
+            <h3>Our First Date</h3>
+            <p>Nervous hands, racing hearts, and the beginning of something magical. I knew from that night — you were special.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <div class="timeline-img-placeholder">
+              <span class="placeholder-icon">✨</span>
+              <span class="placeholder-text">A Special Moment</span>
+            </div>
+            <h3>When I Knew</h3>
+            <p>There was a quiet moment when I looked at you and realized — this is it. You're the one. My heart has been yours ever since.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <div class="timeline-img-placeholder">
+              <span class="placeholder-icon">🌹</span>
+              <span class="placeholder-text">Together</span>
+            </div>
+            <h3>Every Day With You</h3>
+            <p>Every ordinary moment becomes extraordinary when I'm with you. You make everything better just by being you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY I LOVE YOU ===== -->
+  <section id="reasons" class="section reasons-section">
+    <div class="section-container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">Why</span> I Love You
+      </h2>
+      <p class="section-subtitle reveal">Let me count the ways...</p>
+
+      <div class="reasons-grid">
+        <div class="reason-card reveal">
+          <div class="reason-icon">💖</div>
+          <h3>Your Smile</h3>
+          <p>It lights up every room and melts every worry I've ever had. Your smile is my favorite sight in the whole world.</p>
+        </div>
+        <div class="reason-card reveal">
+          <div class="reason-icon">🌟</div>
+          <h3>Your Kindness</h3>
+          <p>The way you care for everyone around you, so gently and genuinely — it makes me fall in love with you all over again.</p>
+        </div>
+        <div class="reason-card reveal">
+          <div class="reason-icon">🦋</div>
+          <h3>Your Strength</h3>
+          <p>You inspire me every single day. Your courage, your resilience, your beautiful soul — I'm in awe of who you are.</p>
+        </div>
+        <div class="reason-card reveal">
+          <div class="reason-icon">🌙</div>
+          <h3>Your Laugh</h3>
+          <p>It's the most beautiful sound I've ever heard. I'd do anything just to hear you laugh every day for the rest of my life.</p>
+        </div>
+        <div class="reason-card reveal">
+          <div class="reason-icon">🔥</div>
+          <h3>Your Passion</h3>
+          <p>The fire in your eyes when you talk about what you love — it makes me want to chase every dream right beside you.</p>
+        </div>
+        <div class="reason-card reveal">
+          <div class="reason-icon">💫</div>
+          <h3>Everything</h3>
+          <p>I love the way you are, every imperfection, every quirk, every beautiful piece of you. You are my everything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WILL YOU BE MY VALENTINE ===== -->
+  <section id="valentine" class="section valentine-section">
+    <div class="section-container">
+      <div class="valentine-content reveal">
+        <div class="big-heart-container">
+          <div class="big-heart">♥</div>
+        </div>
+        <h2 class="valentine-title">Will You Be My Valentine?</h2>
+        <p class="valentine-subtitle">You already own my heart, but I have to ask...</p>
+
+        <div class="valentine-buttons">
+          <button id="btn-yes" class="btn-valentine btn-yes">Yes! 💕</button>
+          <button id="btn-no" class="btn-valentine btn-no">No 😢</button>
+        </div>
+
+        <!-- Success message (hidden by default) -->
+        <div id="valentine-success" class="valentine-success" style="display: none;">
+          <div class="success-hearts">
+            <span>💕</span><span>💖</span><span>💗</span><span>💕</span><span>💖</span>
+          </div>
+          <h2 class="success-title">You Just Made Me the Happiest Person Alive!</h2>
+          <p class="success-text">I love you more than words could ever say. Forever yours. 💕</p>
+          <div class="success-hearts">
+            <span>💗</span><span>💕</span><span>💖</span><span>💗</span><span>💕</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-hearts">♥ ♥ ♥</div>
+    <p class="footer-text">Made with love, for the love of my life.</p>
+    <p class="footer-year">Forever & Always — 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
