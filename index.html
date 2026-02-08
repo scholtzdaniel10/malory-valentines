@@ -10,6 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Entrance Splash (needed for autoplay) -->
+  <div id="entrance-splash" class="entrance-splash">
+    <div class="entrance-content">
+      <div class="entrance-heart">♥</div>
+      <p class="entrance-text">I made something for you...</p>
+      <button id="entrance-btn" class="entrance-btn">Open My Heart</button>
+    </div>
+  </div>
+
   <!-- Floating particles canvas -->
   <canvas id="particles-canvas"></canvas>
 
@@ -20,9 +29,9 @@
     <span class="music-pulse"></span>
   </button>
 
-  <!-- Audio -->
+  <!-- Audio — JVKE "her" -->
   <audio id="bg-music" loop preload="auto">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    <source src="song/JVKE - her (official lyric video).mp3" type="audio/mpeg" />
   </audio>
 
   <!-- ===== HERO SECTION ===== -->
@@ -61,7 +70,7 @@
           <p>I never knew what it meant to truly love someone until I found you. You make me want to be better, dream bigger, and love deeper every single day.</p>
           <p>This letter is just a small window into the universe of feelings I hold for you. Words will never be enough, but I'll spend forever trying.</p>
           <p class="letter-closing">With all my love, forever and always,</p>
-          <p class="letter-signature">Your Person ♥</p>
+          <p class="letter-signature">Daniel ♥</p>
         </div>
         <div class="letter-decoration bottom-left">❦</div>
         <div class="letter-decoration bottom-right">❦</div>
@@ -83,10 +92,7 @@
         <div class="timeline-item reveal" data-side="left">
           <div class="timeline-dot">♥</div>
           <div class="timeline-card">
-            <div class="timeline-img-placeholder">
-              <span class="placeholder-icon">📸</span>
-              <span class="placeholder-text">Our First Photo</span>
-            </div>
+            <img src="images/IMG-20220708-WA0009.jpg" alt="Us" class="timeline-img" />
             <h3>The Day We Met</h3>
             <p>The universe aligned and brought us together. I didn't know it then, but that moment changed my life forever.</p>
           </div>
@@ -95,11 +101,8 @@
         <div class="timeline-item reveal" data-side="right">
           <div class="timeline-dot">♥</div>
           <div class="timeline-card">
-            <div class="timeline-img-placeholder">
-              <span class="placeholder-icon">💕</span>
-              <span class="placeholder-text">Our First Date</span>
-            </div>
-            <h3>Our First Date</h3>
+            <img src="images/IMG-20220914-WA0017.jpg" alt="Us" class="timeline-img" />
+            <h3>Falling For You</h3>
             <p>Nervous hands, racing hearts, and the beginning of something magical. I knew from that night — you were special.</p>
           </div>
         </div>
@@ -107,10 +110,7 @@
         <div class="timeline-item reveal" data-side="left">
           <div class="timeline-dot">♥</div>
           <div class="timeline-card">
-            <div class="timeline-img-placeholder">
-              <span class="placeholder-icon">✨</span>
-              <span class="placeholder-text">A Special Moment</span>
-            </div>
+            <img src="images/IMG-20221124-WA0007.jpg" alt="Us" class="timeline-img" />
             <h3>When I Knew</h3>
             <p>There was a quiet moment when I looked at you and realized — this is it. You're the one. My heart has been yours ever since.</p>
           </div>
@@ -119,13 +119,39 @@
         <div class="timeline-item reveal" data-side="right">
           <div class="timeline-dot">♥</div>
           <div class="timeline-card">
-            <div class="timeline-img-placeholder">
-              <span class="placeholder-icon">🌹</span>
-              <span class="placeholder-text">Together</span>
-            </div>
+            <img src="images/20221225_151910.jpg" alt="Us" class="timeline-img" />
+            <h3>Our Memories</h3>
+            <p>Every single moment with you is a treasure I hold close to my heart. You make the ordinary feel extraordinary.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <img src="images/IMG-20230128-WA0004.jpg" alt="Us" class="timeline-img" />
+            <h3>Growing Together</h3>
+            <p>With every passing day, my love for you only grows deeper. You are my favorite adventure.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot">♥</div>
+          <div class="timeline-card">
+            <img src="images/IMG-20230128-WA0011.jpg" alt="Us" class="timeline-img" />
             <h3>Every Day With You</h3>
             <p>Every ordinary moment becomes extraordinary when I'm with you. You make everything better just by being you.</p>
           </div>
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      <div class="gallery-section reveal">
+        <h3 class="gallery-title">More of Us</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="images/IMG-20221124-WA0010.jpg" alt="Us" /></div>
+          <div class="gallery-item reveal"><img src="images/20221225_152216.jpg" alt="Us" /></div>
+          <div class="gallery-item reveal"><img src="images/20221225_152237.jpg" alt="Us" /></div>
+          <div class="gallery-item reveal"><img src="images/Snapchat-904409446.jpg" alt="Us" /></div>
         </div>
       </div>
     </div>

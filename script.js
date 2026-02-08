@@ -148,6 +148,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bgMusic.volume = 0.3; // Soft background volume
 
+  // --- Entrance splash: starts music on click ---
+  const entranceSplash = document.getElementById('entrance-splash');
+  const entranceBtn = document.getElementById('entrance-btn');
+
+  function startExperience() {
+    // Play music immediately
+    bgMusic.play().then(() => {
+      isPlaying = true;
+      musicBtn.classList.add('playing');
+      musicOn.style.display = 'inline';
+      musicOff.style.display = 'none';
+    }).catch(() => {});
+
+    // Fade out splash
+    entranceSplash.classList.add('hidden');
+    setTimeout(() => {
+      entranceSplash.style.display = 'none';
+    }, 900);
+  }
+
+  entranceBtn.addEventListener('click', startExperience);
+  entranceSplash.addEventListener('click', startExperience);
+
+  // --- Music toggle button ---
   musicBtn.addEventListener('click', () => {
     if (isPlaying) {
       bgMusic.pause();
@@ -162,25 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     isPlaying = !isPlaying;
   });
-
-  // Try to autoplay on first user interaction
-  const tryAutoplay = () => {
-    if (!isPlaying) {
-      bgMusic.play().then(() => {
-        isPlaying = true;
-        musicBtn.classList.add('playing');
-        musicOn.style.display = 'inline';
-        musicOff.style.display = 'none';
-      }).catch(() => {});
-    }
-    document.removeEventListener('click', tryAutoplay);
-    document.removeEventListener('scroll', tryAutoplay);
-    document.removeEventListener('touchstart', tryAutoplay);
-  };
-
-  document.addEventListener('click', tryAutoplay);
-  document.addEventListener('scroll', tryAutoplay);
-  document.addEventListener('touchstart', tryAutoplay);
 
   // ==========================================
   // 4. VALENTINE TRICK — "No" makes "Yes" bigger!
